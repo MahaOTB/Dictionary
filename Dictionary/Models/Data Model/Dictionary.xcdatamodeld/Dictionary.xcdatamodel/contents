@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DefinitionEntity" representedClassName="DefinitionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="definition" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lexical" maxCount="1" deletionRule="Nullify" destinationEntity="LexicalEntity" inverseName="definitions" inverseEntity="LexicalEntity" syncable="YES"/>
+    </entity>
+    <entity name="LexicalEntity" representedClassName="LexicalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DefinitionEntity" inverseName="lexical" inverseEntity="DefinitionEntity" syncable="YES"/>
+        <relationship name="word" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="lexicals" inverseEntity="WordEntity" syncable="YES"/>
+    </entity>
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lexicals" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="LexicalEntity" inverseName="word" inverseEntity="LexicalEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DefinitionEntity" positionX="-38.6875" positionY="12.51953125" width="128" height="73"/>
+        <element name="LexicalEntity" positionX="-221.73046875" positionY="16.796875" width="128" height="88"/>
+        <element name="WordEntity" positionX="-417.14453125" positionY="16.93359375" width="128" height="73"/>
+    </elements>
+</model>
