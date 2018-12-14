@@ -9,6 +9,8 @@ IOS App allow users to search on an English word and easily find list of definit
   - Tap on "Favorites" tab bar > tap on your word
 # Requirements
 - Xcode 10.0 or later
+# Installation 
+Look at this link for more details on how to install [Alamofire](https://github.com/Alamofire/Alamofire)
 # Clone
 * Clone this repo to your local machine using https://github.com/MahaOTB/Dictionary.git
 
